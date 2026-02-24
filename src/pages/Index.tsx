@@ -182,9 +182,6 @@ const Index = () => {
           <Button size="lg" variant="outline" onClick={() => scrollTo("contact")}>
             Get In Touch
           </Button>
-          <Button size="lg" variant="secondary" onClick={handleDownloadZip}>
-            <Download className="mr-2 h-4 w-4" /> Download ZIP
-          </Button>
         </motion.div>
 
         <motion.div
