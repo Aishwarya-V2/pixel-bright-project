@@ -95,35 +95,6 @@ const Index = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleDownloadZip = async () => {
-    const JSZip = (await import("jszip")).default;
-    const { saveAs } = await import("file-saver");
-    const zip = new JSZip();
-
-    // Add a README
-    zip.file(
-      "README.md",
-      `# Aishwarya V — Portfolio\n\nSDET · Automation Engineer\n\nVisit: https://github.com/Aishwarya-V2\nEmail: aishwaryaammuv@gmail.com\nPhone: +91 8088406894\nLocation: Bengaluru, Karnataka\n`
-    );
-
-    // Add resume-like info
-    zip.file(
-      "about.txt",
-      `Aishwarya V\nSDET at Cognizant Technology Solutions\n\nExperience:\n- UI and API automation using Java, JavaScript, Cucumber, Selenium/Playwright\n- LLM-based testing for voice bot in Energy & Utilities domain at PG&E\n- CI/CD integration with Jenkins, database validation with SQL\n\nEducation:\n- B.E. in Computer Science, PES College of Engineering — 9.3 GPA\n\nCertifications:\n- Selenium + Java – Udemy\n- ML Foundation – AWS\n- SQL + MySQL – Udemy\n- REST Assured – Techademy\n`
-    );
-
-    // Add project descriptions
-    const projectsFolder = zip.folder("projects");
-    projects.forEach((p) => {
-      projectsFolder?.file(
-        `${p.title.replace(/\s+/g, "-").toLowerCase()}.txt`,
-        `${p.title}\n${"=".repeat(p.title.length)}\n\n${p.desc}\n\nTech: ${p.tags.join(", ")}\nGitHub: ${p.github}\n`
-      );
-    });
-
-    const blob = await zip.generateAsync({ type: "blob" });
-    saveAs(blob, "Aishwarya-V-Portfolio.zip");
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
