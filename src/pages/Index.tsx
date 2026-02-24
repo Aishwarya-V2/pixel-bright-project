@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Phone, MapPin, ChevronDown, ExternalLink, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MapPin, ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import projectWeather from "@/assets/project-weather.jpg";
 import projectFish from "@/assets/project-fish.jpg";
