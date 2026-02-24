@@ -193,7 +193,7 @@ const Index = () => {
           <a href="https://github.com/Aishwarya-V2" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/aishwarya-v-8aab5223a" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors">
             <Linkedin size={20} />
           </a>
           <a href="mailto:aishwaryaammuv@gmail.com" className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors">
